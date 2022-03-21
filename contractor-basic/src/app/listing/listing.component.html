@@ -1,1 +1,5 @@
-
+<div class="row">
+  <div *ngFor="let item of assets" class="card col-md-15 col-sm-3 shadow-lg">
+    <app-list-item [asset]="item"></app-list-item>
+  </div>
+</div>

@@ -1,8 +1,19 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  templateUrl : 'listing.component.html',
-  selector : 'listing',
-  styleUrls : ['listing.component.css']
+  selector: 'app-listing',
+  templateUrl: 'listing.component.html',
+  styleUrls: ['listing.component.css'],
 })
-export class ListingComponent{}
+export class ListingComponent implements OnInit{
+  assets: Array<any> = [
+    {
+      Name: '2BHK House',
+    },
+    { Name: 'Contemporary House' },
+  ];
+
+  constructor() { }
+  ngOnInit(): void {
+  }
+}
