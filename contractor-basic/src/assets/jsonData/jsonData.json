@@ -1,0 +1,56 @@
+[
+  {
+    "id" : 1,
+    "Name": "2BHK House",
+    "Location" : "Location1",
+    "Contact" : "abc@gmail.com"
+  },
+  {
+    "id" : "2",
+    "Name": "2BHK House",
+    "Location" : "Location2",
+    "Contact" : "abcd@gmail.com"
+  },
+  {
+    "id" : "3",
+    "Name": "2BHK House",
+    "Location" : "Location1",
+    "Contact" : "abcde@gmail.com"
+  },
+  {
+    "id" : "4",
+    "Name": "2BHK House",
+    "Location" : "Location1",
+    "Contact" : "abc@gmail.com"
+  },
+  {
+    "id" : "5",
+    "Name": "2BHK @ story House",
+    "Location" : "Location3",
+    "Contact" : "abc@gmail.com"
+  },
+  {
+    "id" : "6",
+    "Name": "2BHK House",
+    "Location" : "Location4",
+    "Contact" : "abc4@gmail.com"
+  },
+  {
+    "id" : "7",
+    "Name": "2BHK House",
+    "Location" : "Location5",
+    "Contact" : "abc@gmail.com"
+  },
+  {
+    "id" : "8",
+    "Name": "2BHK House Premium",
+    "Location" : "Location1",
+    "Contact" : "abcPremium@gmail.com"
+  },
+  {
+    "id" : "9",
+    "Name": "2BHK House",
+    "Location" : "Location6",
+    "Contact" : "abc@gmail.com"
+  }
+]
