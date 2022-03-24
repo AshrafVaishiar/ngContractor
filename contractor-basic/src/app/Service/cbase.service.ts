@@ -10,14 +10,16 @@ import { Iasset } from '../listing/Iasset.Interface';
 })
 export class CbaseService {
   constructor(private httpclient: HttpClient) {}
-  getAllAssets(): Observable<Iasset[]> {
+  getAllAssets(SellRent: String): Observable<Iasset[]> {
     return this.httpclient.get('assets/jsonData/jsonData.json').pipe(
       map((data) => {
         const assetsArray: Array<Iasset> = [];
         let dataArray: any = [];
         dataArray = data;
-        for (const id in dataArray){
+        for (const id in dataArray) {
+          if (dataArray[id].SellRent === SellRent) {
             assetsArray.push(dataArray[id]);
+          }
         }
         return assetsArray;
       })

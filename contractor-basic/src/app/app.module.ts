@@ -18,12 +18,16 @@ const appRoute: Routes = [
   },
   {
     path: 'addAsset',
-    component: AddAssetComponent
+    component: AddAssetComponent,
   },
   {
     path: 'assetDetail/:id',
-    component: AssetDetailComponent
-  }
+    component: AssetDetailComponent,
+  },
+  {
+    path: 'rent-asset',
+    component: ListingComponent,
+  },
 ];
 
 @NgModule({
@@ -33,8 +37,8 @@ const appRoute: Routes = [
     NavBarComponent,
     ListItemComponent,
     AddAssetComponent,
-      AssetDetailComponent
-   ],
+    AssetDetailComponent,
+  ],
   imports: [
     BrowserModule,
     NgbModule,

@@ -3,54 +3,71 @@
     "id" : 1,
     "Name": "2BHK House",
     "Location" : "Location1",
-    "Contact" : "abc@gmail.com"
+    "Contact" : "abc@gmail.com",
+    "SellRent" : "R",
+    "Img" : "img1"
   },
   {
     "id" : "2",
     "Name": "2BHK House",
     "Location" : "Location2",
-    "Contact" : "abcd@gmail.com"
+    "Contact" : "abcd@gmail.com",
+    "SellRent" : "S",
+    "Img" : "img2"
   },
   {
     "id" : "3",
     "Name": "2BHK House",
     "Location" : "Location1",
-    "Contact" : "abcde@gmail.com"
+    "Contact" : "abcde@gmail.com",
+    "SellRent" : "S",
+    "Img" : "img3"
   },
   {
     "id" : "4",
     "Name": "2BHK House",
     "Location" : "Location1",
-    "Contact" : "abc@gmail.com"
+    "Contact" : "abc@gmail.com",
+    "SellRent" : "S",
+    "Img" : "img4"
   },
   {
     "id" : "5",
     "Name": "2BHK @ story House",
     "Location" : "Location3",
-    "Contact" : "abc@gmail.com"
+    "Contact" : "abc@gmail.com",
+    "SellRent" : "S",
+    "Img" : "img5"
   },
   {
     "id" : "6",
     "Name": "2BHK House",
     "Location" : "Location4",
-    "Contact" : "abc4@gmail.com"
+    "Contact" : "abc4@gmail.com",
+    "SellRent" : "S",
+    "Img" : "img6"
   },
   {
     "id" : "7",
     "Name": "2BHK House",
     "Location" : "Location5",
-    "Contact" : "abc@gmail.com"
+    "Contact" : "abc@gmail.com",
+    "SellRent" : "S",
+    "Img" : "img7"
   },
   {
     "id" : "8",
     "Name": "2BHK House Premium",
     "Location" : "Location1",
-    "Contact" : "abcPremium@gmail.com"
+    "Contact" : "abcPremium@gmail.com",
+    "SellRent" : "R",
+    "Img" : "img8"
   },
   {
     "id" : "9",
     "Name": "2BHK House",
     "Location" : "Location6",
-    "Contact" : "abc@gmail.com"
+    "Contact" : "abc@gmail.com",
+    "SellRent" : "R"
   }
 ]

@@ -10,7 +10,8 @@ export class ListItemComponent implements OnInit {
     id: 1,
     Name: "Default",
     Location: "Default Location",
-    Contact: "Default"
+    Contact: "Default",
+    SellRent: "S"
   };
   constructor() {
   }

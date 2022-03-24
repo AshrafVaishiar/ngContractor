@@ -1,7 +1,9 @@
 <div class="card">
   <div class="card-imgWrapper">
-    <img class="card-img-top"
-      src="../../../assets/ImageFiles/Simple-Contemporary-House-In-Kerala-1024x512.jpg">
+    <img *ngIf="asset.Img" class="card-img-top"
+      src="../../../assets/ImageFiles/{{asset.Img}}.jpg">
+      <img *ngIf="!asset.Img" class="card-img-top"
+      src="../../../assets/ImageFiles/defaultHouse.jpg">
       <ul class="inline list-inline text-center mem-ico animate">
         <li class="inline list-inline-item">
           <button class="btn btn-primary" routerLink="assetDetail/{{asset.id}}"><i class="fa-solid fa-info"></i></button>

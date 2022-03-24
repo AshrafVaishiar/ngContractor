@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CbaseService } from '../Service/cbase.service';
 import { Iasset } from './Iasset.Interface';
 @Component({
@@ -7,10 +8,18 @@ import { Iasset } from './Iasset.Interface';
   styleUrls: ['listing.component.css'],
 })
 export class ListingComponent implements OnInit {
+  SellRent = 'S';
   assets: Array<Iasset> = [];
-  constructor(private cbase: CbaseService) {}
+  constructor(
+    private cbase: CbaseService,
+    private currActivatedRoute: ActivatedRoute
+  ) {}
   ngOnInit(): void {
-    this.cbase.getAllAssets().subscribe(
+    if (this.currActivatedRoute.snapshot.url.toString()) {
+      console.log(this.currActivatedRoute.snapshot.url.toString());
+      this.SellRent = 'R';
+    }
+    this.cbase.getAllAssets(this.SellRent).subscribe(
       (data) => {
         this.assets = data;
       },
