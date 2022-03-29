@@ -1,21 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #54ad0b46;">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #54ad0b46;">
   <div class="container-fluid">
     <!-- <a class="navbar-brand" href="#">contractorBase</a> -->
     <!-- Image and text -->
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <div class="navbar-nav me-auto mb-2 mb-lg-0">
-      <img src="../../assets/ImageFiles/imgLogo.PNG" width="100" height="100" class="" alt="cB">
-    </div>
-  </a>
-</nav>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-nav" href="#">
+        <div class="navbar-nav me-auto mb-lg-0">
+          <img src="../../assets/ImageFiles/imgLogo.PNG" width="100" height="80" class="" alt="cB">
+        </div>
+      </a>
+    </nav>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" routerLink="/">Buy</a>
+          <a class="nav-link" aria-current="page" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+            routerLink="/">Buy</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="rent-asset">Rent</a>
@@ -24,10 +26,37 @@
           <a class="nav-link" routerLink="addAsset">List Property</a>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <div>
+        <ul class="nav navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="user/register" routerLinkActive="active" *ngIf="!loggedIn()">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="user/login" *ngIf="!loggedIn()">Login</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="user/login" *ngIf="loggedIn()" (click)="loggedOut()">Logout</a>
+          </li> -->
+          <div *ngIf="loggedIn()" class="dropdown" dropdown>
+            <a href="#" class="dropdown-toggle text-capitalize text-dark" dropdownToggle (click)="false">Welcome {{loggedInUser}}</a>
+            <div class="dropdown-menu text-black" *dropdownMenu>
+              <a href="#" class="dropdwon-item  text-dark">
+                <i class="fas fa-tachometer-alt"></i> View Dashboard
+              </a>
+              <br/>
+              <a href="#" class="dropdwon-item text-dark">
+                <i class="far fa-user-circle" ></i> My Profile
+              </a>
+              <a href="#" class="dropdwon-item text-dark">
+                <i class="fas fa-key"></i> Change Password
+              </a>
+              <a href="#" class="dropdwon-item text-dark" (click)="loggedOut()">
+                <i class="fas fa-sign-out-alt"></i> LogOut
+              </a>
+            </div>
+          </div>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

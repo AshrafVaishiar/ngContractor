@@ -1,0 +1,17 @@
+.error-block {
+  color: red;
+}
+.ng-touched.ng-invalid {
+  border-color: red;
+}
+.border{
+  border-color: red;
+}
+.dropdown-menu {
+  position: relative;
+}
+.btn-group > label[ng-reflect-btn-radio] {
+  border-radius: 44px;
+  padding: 0 15px;
+  line-height: 30px;
+}

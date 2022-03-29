@@ -1,0 +1,12 @@
+.photo-control{
+  min-height: 300px;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px dashed blue;
+  margin: 5px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1vmin;
+}
