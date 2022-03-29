@@ -16,10 +16,16 @@ export class AddAssetComponent implements OnInit {
   furnishType = ['Fully', 'Semi', 'Unfurnished'];
   assetView: Iasset = {
     id: 0,
-    Name: "",
-    Location: "",
-    Contact: "",
+    Name: '',
+    Price: 0,
     SellRent: "",
+    PType: "",
+    FType: "",
+    BHK: 0,
+    BuiltArea: 0,
+    City: "",
+    RTM: 0,
+    Contact: ""
   };
 
   constructor(private router: Router) {}

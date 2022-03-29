@@ -1,10 +1,10 @@
 <div class="card">
   <div class="card-imgWrapper">
-    <img *ngIf="asset.Img" class="card-img-top"
-      src="../../../assets/ImageFiles/{{asset.Img}}.jpg">
-      <img *ngIf="!asset.Img" class="card-img-top"
+    <img *ngIf="asset.Image" class="card-img-top"
+      src="../../../assets/ImageFiles/{{asset.Image}}.jpg">
+      <img *ngIf="!asset.Image" class="card-img-top"
       src="../../../assets/ImageFiles/defaultHouse.jpg">
-      <ul class="inline list-inline text-center mem-ico animate">
+      <ul class="inline list-inline text-center mem-ico animate" *ngIf="! hideIcons">
         <li class="inline list-inline-item">
           <button class="btn btn-primary" routerLink="assetDetail/{{asset.id}}"><i class="fa-solid fa-info"></i></button>
         </li>
@@ -13,7 +13,19 @@
         </li>
       </ul>
   </div>
-  <div class=" card-body p-2">{{asset.Name}}</div>
-  <div class=" card-body p-2">{{asset.Location}}</div>
-  <div class=" card-body p-2">{{asset.Contact}}</div>
+  <div class="card-body p-1">
+    <h1 class="mb-0"> {{asset.BHK}} BHK {{asset.PType}} </h1>
+
+    in {{asset.Name}}
+    <span *ngIf="asset.Name">,</span>
+    {{asset.City}}
+
+    <h6  class="mt-2">{{asset.FType}}
+    <span *ngIf="asset.FType !== 'Unfurnished'">Furnished</span> | Ready to Move</h6>
+
+    <hr class="mt-0 mb-2">
+
+    <h6 class="mb-0">Price: <span class>{{asset.Price}} USD.</span> |
+      Area:  <span>{{asset.BuiltArea}} Sq Ft </span> </h6>
+  </div>
 </div>

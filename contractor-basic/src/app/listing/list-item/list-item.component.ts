@@ -7,12 +7,20 @@ import { Iasset } from '../Iasset.Interface';
 })
 export class ListItemComponent implements OnInit {
   @Input() asset: Iasset = {
-    id: 1,
-    Name: "Default",
-    Location: "Default Location",
-    Contact: "Default",
-    SellRent: "S"
+    id: 0,
+    Name: '',
+    Price: 0,
+    SellRent: "",
+    PType: "",
+    FType: "",
+    BHK: 0,
+    BuiltArea: 0,
+    City: "",
+    RTM: 0,
+    Contact: ""
   };
+  @Input()
+  hideIcons!: boolean;
   constructor() {
   }
 

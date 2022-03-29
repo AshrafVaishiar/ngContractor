@@ -1,7 +1,6 @@
 import { JsonPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Obj } from '@popperjs/core';
 import { map, Observable } from 'rxjs';
 import { Iasset } from '../listing/Iasset.Interface';
 
