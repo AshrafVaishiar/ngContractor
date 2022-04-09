@@ -21,6 +21,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { AssetDetailResolverService } from './asset-detail/asset-detail-resolver.service';
 
 const appRoute: Routes = [
   {
@@ -34,6 +35,7 @@ const appRoute: Routes = [
   {
     path: 'assetDetail/:id',
     component: AssetDetailComponent,
+    resolve: {ars : AssetDetailResolverService}
   },
   {
     path: 'rent-asset',

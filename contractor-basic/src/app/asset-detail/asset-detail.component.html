@@ -1,8 +1,114 @@
-<p>
-  asset-detail works! {{assetID}}
-<br />
-<button (click)="onNext()" class="btn btn-success">Next Asset</button>
-<br />
-<br />
-<button routerLink="/assetDetail/1" class="btn btn-info">1</button>
-</p>
+<div class="row shadow">
+  <div class="col-sm-4 p-0">
+    <div class="card">
+      <div class="card-img-wrapper">
+        <img *ngIf="asset.Image" class="card-img-top" src="assets\ImageFiles\{{asset.Image}}.jpg">
+        <img *ngIf="!asset.Image" class="card-img-top" src="assets\ImageFiles\defaultHouse.jpg">
+      </div>
+      <div class="card-body">
+        <h1><div class="card-title">{{asset.Name}}</div></h1>
+        <div>
+          <strong>{{asset.BHK}} BHK {{asset.AType}} @ ${{asset.Price}}</strong>
+      </div>
+      <div>
+         <strong>in {{asset.City}}</strong>
+      </div> <hr>
+      <div>
+          <strong>Build Area: </strong>
+          {{asset.BuiltArea}} Sqft
+      </div>
+
+      <div>
+          <strong>Carpet Area: </strong>
+          {{asset.CarpetArea}} Sqft
+      </div>
+      <div>
+          <strong>Furnishing Type: </strong>
+          {{asset.FType}}
+      </div>
+      </div>
+      <div class="card-footer">
+        <div class="btn-group d-flex">
+          <button class="btn btn-primary">Like</button>
+          <button class="btn btn-success">Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8 p-0">
+    <div class="tab-panel">
+      <tabset class="member-tabset">
+        <tab heading="overview">
+          <h1>Overview</h1>
+          <div class="row">
+              <div class="col-sm-6">
+                  <div class="heading">
+                      <strong>Project Name</strong>
+                      <p>{{asset.Name}}</p>
+                  </div>
+
+                  <div class="heading">
+                      <strong>Floor Number</strong>
+                      <p>{{asset.FloorNo}}</p>
+                  </div>
+
+                  <div class="heading">
+                      <strong>Age of Asset</strong>
+                      <p>{{asset.AOP}}</p>
+                  </div>
+
+                  <div class="heading">
+                      <strong>Posession</strong>
+                      <p>{{asset.Possession}}</p>
+                  </div>
+              </div>
+
+              <div class="col-sm-6">
+                  <div class="heading">
+                      <strong>Main Entrance</strong>
+                      <p>{{asset.MainEntrance}}</p>
+                  </div>
+
+                  <div class="heading">
+                      <strong>Gated Community</strong>
+                      <p>{{asset.Gated}}</p>
+                  </div>
+
+                  <div class="heading">
+                      <strong>Security Deposit</strong>
+                      <p>{{asset.Security}}</p>
+                  </div>
+                  <div class="heading">
+                      <strong>Maintenance</strong>
+                      <p>{{asset.Maintenance}}</p>
+                  </div>
+              </div>
+              <div class="col-sm-12">
+                  <div class="heading">
+                      <strong>About Asset</strong>
+                      <p>{{asset.Description}}</p>
+                  </div>
+              </div>
+            </div>
+        </tab>
+        <tab heading="Address">
+          <div class="col-sm-12">
+            <h1>Address</h1>
+            <div class="heading">
+                <strong>{{asset.Address}}</strong><br/>
+                <strong>{{asset.Address2}}</strong><br/>
+                <strong>{{asset.City}}</strong>
+            </div>
+        </div>
+
+        </tab>
+        <tab heading="Photo">
+
+        </tab>
+        <tab heading="Contact">
+          <h1>Contact Details</h1>
+        </tab>
+      </tabset>
+    </div>
+  </div>
+</div>

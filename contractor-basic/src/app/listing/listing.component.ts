@@ -21,7 +21,9 @@ export class ListingComponent implements OnInit {
     }
     this.cbase.getAllAssets(this.SellRent).subscribe(
       (data) => {
+        debugger;
         this.assets = data;
+
       },
       (error) => {
         console.log(error);

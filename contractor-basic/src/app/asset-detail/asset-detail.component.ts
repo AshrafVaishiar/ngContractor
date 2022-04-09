@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Asset } from '../model/asset';
+import { CbaseService } from '../Service/cbase.service';
 
 @Component({
   selector: 'app-asset-detail',
@@ -8,22 +10,19 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AssetDetailComponent implements OnInit {
   public assetID: number;
+  asset = new Asset();
   constructor(
     private currActiveRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private cbase: CbaseService
   ) {
     this.assetID = 0;
   }
 
   ngOnInit() {
     this.assetID = +this.currActiveRoute.snapshot.params['id'];
-    this.currActiveRoute.params.subscribe((parameters) => {
-      this.assetID = +parameters['id'];
+    this.currActiveRoute.data.subscribe((data) => {
+      this.asset = data['ars'];
     });
-  }
-
-  onNext() {
-    this.assetID += 1;
-    this.router.navigate(['assetDetail', this.assetID]);
   }
 }

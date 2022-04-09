@@ -4,11 +4,12 @@ export interface Iasset {
   Contact: string;
   SellRent: String;
   Image?: String;
-  PType: string;
+  AType: string;
   FType: string;
-  Price: number;
-  BHK: number;
-  BuiltArea: number;
-  City: string;
-  RTM: number;
+  Price: null | number;
+  BHK: null | number;
+  BuiltArea: null | number;
+  City: String;
+  RTM: null | number;
+  Address: String;
 }
